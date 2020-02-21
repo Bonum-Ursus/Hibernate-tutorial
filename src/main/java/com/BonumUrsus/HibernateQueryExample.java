@@ -3,26 +3,27 @@ package com.BonumUrsus;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
-public class RetrievingJavaObjectWithHibernate {
-    public static Logger log = LoggerFactory.getLogger(RetrievingJavaObjectWithHibernate.class.getName());
+import java.util.List;
+
+
+public class HibernateQueryExample {
     public static void main(String[] args) {
         SessionFactory factory = new Configuration()
                 .configure("hibernate.cfg.xml")
                 .addAnnotatedClass(Student.class)
                 .buildSessionFactory();
         Session session = factory.getCurrentSession();
-
-        try {
-            Student theStudent;
+        try{
             session.beginTransaction();
-            theStudent = session.get(Student.class, 4);
-            log.info(theStudent.toString());
+            List<Student> studentList = session.createQuery("from Student").getResultList();
+            studentList.forEach(student -> System.out.println(student));
+            List<Student> studentList2 = session.createQuery("from Student s where s.id=4").getResultList();
+            studentList2.forEach(student -> System.out.println(student));
             session.getTransaction().commit();
         }finally {
             factory.close();
         }
+
     }
 }

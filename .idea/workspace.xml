@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5a09fbf4-aaf6-43b9-aeff-2e12d231456f" name="Default Changelist" comment="" />
+    <list default="true" id="5a09fbf4-aaf6-43b9-aeff-2e12d231456f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/BonumUrsus/CreateStudent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/BonumUrsus/PrimaryKeyExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/BonumUrsus/RetrievingJavaObjectWithHibernate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Hibernate-tutorial.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Hibernate-tutorial.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/BonumUrsus/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/BonumUrsus/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/BonumUrsus/TestJDBC.class" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,7 +63,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1Y4c5hcMpqYvw7jLGDRNESmKsRd" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -60,9 +76,10 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/mysql-connector-java-5.1.48.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/mysql-connector-java-5.1.48.jar!/" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -79,7 +96,46 @@
       <recent name="C:\Users\User\IdeaProjects\Hibernate-tutorial\src" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.RetrievingJavaObjectWithHibernate">
+    <configuration name="CreateStudent" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.BonumUrsus.CreateStudent" />
+      <module name="Hibernate-tutorial" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.BonumUrsus.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PrimaryKeyExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.BonumUrsus.PrimaryKeyExample" />
+      <module name="Hibernate-tutorial" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.BonumUrsus.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RetrievingJavaObjectWithHibernate" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.BonumUrsus.RetrievingJavaObjectWithHibernate" />
+      <module name="Hibernate-tutorial" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.BonumUrsus.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestJDBC" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.BonumUrsus.TestJDBC" />
       <module name="Hibernate-tutorial" />
@@ -95,6 +151,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RetrievingJavaObjectWithHibernate" />
+        <item itemvalue="Application.PrimaryKeyExample" />
+        <item itemvalue="Application.CreateStudent" />
         <item itemvalue="Application.TestJDBC" />
       </list>
     </recent_temporary>
@@ -132,7 +191,8 @@
       <option name="presentableId" value="Default" />
       <updated>1582205125777</updated>
       <workItem from="1582205130761" duration="1173000" />
-      <workItem from="1582206345506" duration="3390000" />
+      <workItem from="1582206345506" duration="4678000" />
+      <workItem from="1582264015328" duration="5202000" />
     </task>
     <servers />
   </component>
@@ -140,42 +200,46 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-920" y="299" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582208419212">
+    <state x="-920" y="299" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582264050562">
       <screen x="-1024" y="0" width="1024" height="1280" />
     </state>
-    <state x="-920" y="299" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1024.0.1024.1280@-1024.0.1024.1280" timestamp="1582208419212" />
+    <state x="-920" y="299" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1024.0.1024.1280@-1024.0.1024.1280" timestamp="1582264050562" />
     <state x="-707" y="356" key="#com.intellij.ide.util.MemberChooser" timestamp="1582209754122">
       <screen x="-1024" y="0" width="1024" height="1280" />
     </state>
     <state x="-707" y="356" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1024.0.1024.1280@-1024.0.1024.1280" timestamp="1582209754122" />
-    <state x="-806" y="382" key="FileChooserDialogImpl" timestamp="1582206782257">
+    <state x="-806" y="382" key="FileChooserDialogImpl" timestamp="1582268796362">
       <screen x="-1024" y="0" width="1024" height="1280" />
     </state>
-    <state x="-806" y="382" key="FileChooserDialogImpl/0.0.1920.1040/-1024.0.1024.1280@-1024.0.1024.1280" timestamp="1582206782257" />
-    <state width="981" height="361" key="GridCell.Tab.0.bottom" timestamp="1582209123916">
+    <state x="-806" y="382" key="FileChooserDialogImpl/0.0.1920.1040/-1024.0.1024.1280@-1024.0.1024.1280" timestamp="1582268796362" />
+    <state width="981" height="361" key="GridCell.Tab.0.bottom" timestamp="1582271480850">
       <screen x="-1024" y="0" width="1024" height="1280" />
     </state>
-    <state width="981" height="361" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1024.0.1024.1280@-1024.0.1024.1280" timestamp="1582209123916" />
-    <state width="981" height="361" key="GridCell.Tab.0.center" timestamp="1582209123916">
+    <state width="981" height="361" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1024.0.1024.1280@-1024.0.1024.1280" timestamp="1582271480850" />
+    <state width="981" height="361" key="GridCell.Tab.0.center" timestamp="1582271480850">
       <screen x="-1024" y="0" width="1024" height="1280" />
     </state>
-    <state width="981" height="361" key="GridCell.Tab.0.center/0.0.1920.1040/-1024.0.1024.1280@-1024.0.1024.1280" timestamp="1582209123916" />
-    <state width="981" height="361" key="GridCell.Tab.0.left" timestamp="1582209123916">
+    <state width="981" height="361" key="GridCell.Tab.0.center/0.0.1920.1040/-1024.0.1024.1280@-1024.0.1024.1280" timestamp="1582271480850" />
+    <state width="981" height="361" key="GridCell.Tab.0.left" timestamp="1582271480849">
       <screen x="-1024" y="0" width="1024" height="1280" />
     </state>
-    <state width="981" height="361" key="GridCell.Tab.0.left/0.0.1920.1040/-1024.0.1024.1280@-1024.0.1024.1280" timestamp="1582209123916" />
-    <state width="981" height="361" key="GridCell.Tab.0.right" timestamp="1582209123916">
+    <state width="981" height="361" key="GridCell.Tab.0.left/0.0.1920.1040/-1024.0.1024.1280@-1024.0.1024.1280" timestamp="1582271480849" />
+    <state width="981" height="361" key="GridCell.Tab.0.right" timestamp="1582271480850">
       <screen x="-1024" y="0" width="1024" height="1280" />
     </state>
-    <state width="981" height="361" key="GridCell.Tab.0.right/0.0.1920.1040/-1024.0.1024.1280@-1024.0.1024.1280" timestamp="1582209123916" />
-    <state x="-1024" y="215" key="SettingsEditor" timestamp="1582206821707">
+    <state width="981" height="361" key="GridCell.Tab.0.right/0.0.1920.1040/-1024.0.1024.1280@-1024.0.1024.1280" timestamp="1582271480850" />
+    <state x="-1024" y="215" key="SettingsEditor" timestamp="1582268823435">
       <screen x="-1024" y="0" width="1024" height="1280" />
     </state>
-    <state x="-1024" y="215" key="SettingsEditor/0.0.1920.1040/-1024.0.1024.1280@-1024.0.1024.1280" timestamp="1582206821707" />
-    <state x="-817" y="464" key="com.intellij.ide.util.TipDialog" timestamp="1582206345537">
+    <state x="-1024" y="215" key="SettingsEditor/0.0.1920.1040/-1024.0.1024.1280@-1024.0.1024.1280" timestamp="1582268823435" />
+    <state x="-796" y="282" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1582269532371">
       <screen x="-1024" y="0" width="1024" height="1280" />
     </state>
-    <state x="-817" y="464" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1024.0.1024.1280@-1024.0.1024.1280" timestamp="1582206345537" />
+    <state x="-796" y="282" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1920.1040/-1024.0.1024.1280@-1024.0.1024.1280" timestamp="1582269532371" />
+    <state x="-817" y="464" key="com.intellij.ide.util.TipDialog" timestamp="1582264027414">
+      <screen x="-1024" y="0" width="1024" height="1280" />
+    </state>
+    <state x="-817" y="464" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1024.0.1024.1280@-1024.0.1024.1280" timestamp="1582264027414" />
     <state x="-856" y="300" key="run.anything.popup" timestamp="1582209530758">
       <screen x="-1024" y="0" width="1024" height="1280" />
     </state>

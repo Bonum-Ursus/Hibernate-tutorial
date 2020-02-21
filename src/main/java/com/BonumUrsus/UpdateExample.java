@@ -15,8 +15,11 @@ public class UpdateExample {
         try{
             session.beginTransaction();
             Student student = session.get(Student.class, 4);
-            student.setFirstName("Yenn");
-            session.save(student);
+            student.setFirstName("Yennefer");
+
+            session.createQuery("UPDATE Student set email='witcher.characters@gmal.com'")
+                    .executeUpdate();
+
             session.getTransaction().commit();
         }finally {
             factory.close();

@@ -1,4 +1,4 @@
-package com.BonumUrsus;
+package com.BonumUrsus.part1;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -22,6 +22,7 @@ public class DeleteExamples {
 
             session.getTransaction().commit();
         }finally {
+            session.close();
             factory.close();
         }
 

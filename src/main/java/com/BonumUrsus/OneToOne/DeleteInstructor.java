@@ -1,10 +1,10 @@
-package com.BonumUrsus;
+package com.BonumUrsus.OneToOne;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-public class CreateInstructor {
+public class DeleteInstructor {
     public static void main(String[] args) {
         SessionFactory factory = new Configuration()
                 .configure("hibernate-one-to-one.cfg.xml")
@@ -12,16 +12,23 @@ public class CreateInstructor {
                 .addAnnotatedClass(InstructorDetail.class)
                 .buildSessionFactory();
         Session session = factory.getCurrentSession();
-
         try{
-            Instructor instructor = new Instructor("Bonum", "Ursus", "Bonum.Ursus@gmail.com");
-            InstructorDetail instructorDetail = new InstructorDetail("MyChannel", "Computer science");
-            instructor.setInstructorDetailId(instructorDetail);
             session.beginTransaction();
-            session.save(instructor);
+//            Version1
+//            Instructor instructor = session.get(Instructor.class, 1);
+//            session.delete(instructor);
+
+            InstructorDetail instructorDetail = session.get(InstructorDetail.class, 4);
+            session.delete(instructorDetail);
+
+
+//            Version2(Do NOT delete from InstructorDetail)
+//            session.createQuery("delete from Instructor i where i.id=2").executeUpdate();
+
             session.getTransaction().commit();
         }finally {
-
+            session.close();
+            factory.close();
         }
     }
 }

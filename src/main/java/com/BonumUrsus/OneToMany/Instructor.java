@@ -1,6 +1,8 @@
-package com.BonumUrsus;
+package com.BonumUrsus.OneToMany;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "instructor")
@@ -21,7 +23,14 @@ public class Instructor {
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "instructor_detail_id")
-    private InstructorDetail instructorDetailId;
+    private InstructorDetail instructorDetail;
+
+    @OneToMany(mappedBy = "instructor", cascade = {
+            CascadeType.DETACH,
+            CascadeType.MERGE,
+            CascadeType.PERSIST,
+            CascadeType.REFRESH})
+    private List<Course> courses;
 
     public Instructor() {
     }
@@ -29,6 +38,14 @@ public class Instructor {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+    }
+
+    public List<Course> getCourses() {
+        return courses;
+    }
+
+    public void setCourses(List<Course> courses) {
+        this.courses = courses;
     }
 
     public int getId() {
@@ -63,12 +80,19 @@ public class Instructor {
         this.email = email;
     }
 
-    public InstructorDetail getInstructorDetailId() {
-        return instructorDetailId;
+    public InstructorDetail getInstructorDetail() {
+        return instructorDetail;
     }
 
-    public void setInstructorDetailId(InstructorDetail instructorDetailId) {
-        this.instructorDetailId = instructorDetailId;
+    public void setInstructorDetail(InstructorDetail instructorDetailId) {
+        this.instructorDetail = instructorDetailId;
+    }
+
+    public void addCourse(Course course){
+        if(courses == null)
+            courses = new ArrayList<>();
+        courses.add(course);
+        course.setInstructor(this);
     }
 
     @Override
@@ -78,7 +102,7 @@ public class Instructor {
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
-                ", instructorDetailId=" + instructorDetailId +
+                ", instructorDetailId=" + instructorDetail +
                 '}';
     }
 }

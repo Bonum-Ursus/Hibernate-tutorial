@@ -1,13 +1,10 @@
-package com.BonumUrsus;
+package com.BonumUrsus.part1;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import java.util.List;
-
-
-public class HibernateQueryExample {
+public class PrimaryKeyExample {
     public static void main(String[] args) {
         SessionFactory factory = new Configuration()
                 .configure("hibernate.cfg.xml")
@@ -15,15 +12,20 @@ public class HibernateQueryExample {
                 .buildSessionFactory();
         Session session = factory.getCurrentSession();
         try{
+            Student theStudent1 = new Student(
+                    "Geralt", "from Rivia", "Geralt@gmail.com");
+            Student theStudent2 = new Student(
+                    "Yennefer", "from Belleteyn", "Yennefer@gmail.com");
+            Student theStudent3 = new Student(
+                    "Triss", "from Maribor ", "Triss@gmail.com");
             session.beginTransaction();
-            List<Student> studentList = session.createQuery("from Student").getResultList();
-            studentList.forEach(student -> System.out.println(student));
-            List<Student> studentList2 = session.createQuery("from Student s where s.id=4").getResultList();
-            studentList2.forEach(student -> System.out.println(student));
+            session.save(theStudent1);
+            session.save(theStudent2);
+            session.save(theStudent3);
             session.getTransaction().commit();
         }finally {
+            session.close();
             factory.close();
         }
-
     }
 }

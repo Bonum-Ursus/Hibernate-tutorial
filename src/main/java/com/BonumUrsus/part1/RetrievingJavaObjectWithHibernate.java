@@ -1,29 +1,28 @@
-package com.BonumUrsus;
+package com.BonumUrsus.part1;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-public class PrimaryKeyExample {
+public class RetrievingJavaObjectWithHibernate {
+    public static Logger log = LoggerFactory.getLogger(RetrievingJavaObjectWithHibernate.class.getName());
     public static void main(String[] args) {
         SessionFactory factory = new Configuration()
                 .configure("hibernate.cfg.xml")
                 .addAnnotatedClass(Student.class)
                 .buildSessionFactory();
         Session session = factory.getCurrentSession();
-        try{
-            Student theStudent1 = new Student(
-                    "Geralt", "from Rivia", "Geralt@gmail.com");
-            Student theStudent2 = new Student(
-                    "Yennefer", "from Belleteyn", "Yennefer@gmail.com");
-            Student theStudent3 = new Student(
-                    "Triss", "from Maribor ", "Triss@gmail.com");
+
+        try {
+            Student theStudent;
             session.beginTransaction();
-            session.save(theStudent1);
-            session.save(theStudent2);
-            session.save(theStudent3);
+            theStudent = session.get(Student.class, 4);
+            log.info(theStudent.toString());
             session.getTransaction().commit();
         }finally {
+            session.close();
             factory.close();
         }
     }

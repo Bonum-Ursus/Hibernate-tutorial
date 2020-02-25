@@ -1,4 +1,4 @@
-package com.BonumUrsus;
+package com.BonumUrsus.part1;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -25,6 +25,7 @@ public class CreateStudent {
             session.getTransaction().commit();
             LOG.info("Committed");
         }finally {
+            session.close();
             factory.close();
             LOG.info("SessionFactory closed");
         }
